@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
-import './Subscriptionscontainer.css';
+import { Link } from "react-router-dom";
+import "./SubscriptionsContainer.css";
 
 function SubscriptionsContainer() {
   const [subscriptions, setSubscriptions] = useState([]);
   const [message, setMessage] = useState("");
+  const [showActiveOnly, setShowActiveOnly] = useState(false); // Toggle filter state
 
   useEffect(() => {
     fetch("http://localhost:3000/api/v1/subscriptions")
@@ -19,15 +21,27 @@ function SubscriptionsContainer() {
       });
   }, []);
 
+  const filteredSubscriptions = showActiveOnly
+    ? subscriptions.filter((sub) => sub.attributes.status !== "cancelled")
+    : subscriptions;
+
   return (
     <section className="subscriptions-container">
-      {subscriptions.length > 0 ? (
-        subscriptions.map((subscription) => (
-          <div className="subscription" key={subscription.id}>
-            <h1>{subscription.attributes.title}</h1>
-            <p>Price: ${subscription.attributes.price}</p>
-            <p>Frequency: {subscription.attributes.frequency}</p>
-          </div>
+      {message && <p className="error-message">{message}</p>}
+      <button onClick={() => setShowActiveOnly((prev) => !prev)}>
+        {showActiveOnly ? "Show All" : "Hide Canceled"}
+      </button>
+
+      {filteredSubscriptions.length > 0 ? (
+        filteredSubscriptions.map((subscription) => (
+          <Link to={`/subscription/${subscription.id}`} key={subscription.id} className="subscription-link">
+            <div className="subscription">
+              <h1>{subscription.attributes.title}</h1>
+              <p>Price: ${subscription.attributes.price}</p>
+              <p>Frequency: {subscription.attributes.frequency}</p>
+              <p>Status: {subscription.attributes.status}</p>
+            </div>
+          </Link>
         ))
       ) : (
         !message && <p>No subscriptions available.</p>

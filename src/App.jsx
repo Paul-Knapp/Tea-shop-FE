@@ -1,13 +1,12 @@
-import { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Homepage from './HomePage/Homepage.jsx';
-import NavBar from './NavBar/NavBar.jsx';
+import SubscriptionDetails from './SubscriptionDetails/SubscriptionDetails.jsx';
 
 function App() {
   return (
     <Routes>
-      <Route path="/subscriptionid" />
+      <Route path="/subscription/:subscriptionId" element={<SubscriptionDetails/>}/>
       <Route path="/" element={<Homepage />} />
     </Routes>
   )
