@@ -56,7 +56,7 @@ function SubscriptionDetails() {
             </section>
             <section>
                 <h2>Customer Information</h2>
-                <p>{customer.first_name}{customer.last_name}</p>
+                <p>{customer.first_name} {customer.last_name}</p>
                 <p>{customer.email}</p>
                 <p>{customer.address}</p>
             </section>

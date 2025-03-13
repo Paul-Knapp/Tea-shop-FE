@@ -5,7 +5,7 @@ import "./SubscriptionsContainer.css";
 function SubscriptionsContainer() {
   const [subscriptions, setSubscriptions] = useState([]);
   const [message, setMessage] = useState("");
-  const [showActiveOnly, setShowActiveOnly] = useState(false); // Toggle filter state
+  const [showActiveOnly, setShowActiveOnly] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:3000/api/v1/subscriptions")

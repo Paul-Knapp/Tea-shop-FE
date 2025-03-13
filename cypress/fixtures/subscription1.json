@@ -1,0 +1,103 @@
+{
+    "data": {
+        "id": "1",
+        "type": "subscription",
+        "attributes": {
+            "title": "Monthly Green Tea",
+            "price": "15.99",
+            "status": "active",
+            "frequency": "monthly",
+            "image_url": "data:image/jpeg;base64,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"
+        },
+        "relationships": {
+            "teas": {
+                "data": [
+                    {
+                        "id": "1",
+                        "type": "tea"
+                    },
+                    {
+                        "id": "3",
+                        "type": "tea"
+                    }
+                ]
+            },
+            "customer": {
+                "data": {
+                    "id": "1",
+                    "type": "customer"
+                }
+            }
+        }
+    },
+    "included": [
+        {
+            "id": "1",
+            "type": "tea",
+            "attributes": {
+                "title": "Green Tea",
+                "description": "Light and refreshing",
+                "temperature": 80,
+                "brew_time": 2
+            },
+            "relationships": {
+                "subscriptions": {
+                    "data": [
+                        {
+                            "id": "1",
+                            "type": "subscription"
+                        },
+                        {
+                            "id": "4",
+                            "type": "subscription"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "3",
+            "type": "tea",
+            "attributes": {
+                "title": "Oolong Tea",
+                "description": "Rich and complex",
+                "temperature": 90,
+                "brew_time": 4
+            },
+            "relationships": {
+                "subscriptions": {
+                    "data": [
+                        {
+                            "id": "1",
+                            "type": "subscription"
+                        },
+                        {
+                            "id": "3",
+                            "type": "subscription"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "1",
+            "type": "customer",
+            "attributes": {
+                "first_name": "Alice",
+                "last_name": "Johnson",
+                "email": "alice@example.com",
+                "address": "123 Main St"
+            },
+            "relationships": {
+                "subscriptions": {
+                    "data": [
+                        {
+                            "id": "1",
+                            "type": "subscription"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
