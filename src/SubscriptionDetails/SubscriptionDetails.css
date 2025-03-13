@@ -13,7 +13,6 @@
     background: white;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     max-width: 500px;
     width: 90%;
     text-align: center;
@@ -47,6 +46,10 @@ img {
     color: #555;
     font-size: 18px;
     margin: 5px 0;
+}
+
+h3 {
+    color: black
 }
 
 @media (max-width: 600px) {
